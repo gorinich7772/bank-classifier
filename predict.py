@@ -2,7 +2,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # 1. Путь к твоей обученной модели (замени на актуальный чекпоинт из папки results)
-model_path = "./results/checkpoint-9"  # или просто "./results" в конце обучения
+model_path = "./results/checkpoint-500"  # или просто "./results" в конце обучения
 tokenizer_name = "deepvk/RuModernBERT-base"
 
 # 2. Загрузка

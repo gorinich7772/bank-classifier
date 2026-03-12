@@ -32,9 +32,9 @@ tokenized_dataset = dataset.map(tokenize_function, batched=True)
 training_args = TrainingArguments(
     output_dir="./results",
     learning_rate=2e-5,
-    per_device_train_batch_size=64, # Если памяти мало, ставь 8
-    num_train_epochs=3,
-    weight_decay=0.01, #сколько примеров за один раз модель «прочитывает»
+    per_device_train_batch_size=32, #сколько примеров за один раз модель «прочитывает»
+    num_train_epochs=100,
+    weight_decay=0.01,
     # evaluation_strategy="no", # Можно добавить валидацию
     save_strategy="epoch",
     fp16=True, # Включаем, если у тебя карта RTX
